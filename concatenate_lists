@@ -1,0 +1,17 @@
+def concatenate_lists(list1, list2):
+    concatenated_list = list1 + list2
+    return concatenated_list
+
+# Take lists as input from the console
+list_a = input("Enter the first list (comma-separated): ").split(',')
+list_b = input("Enter the second list (comma-separated): ").split(',')
+
+# Convert input strings to appropriate types
+list_a = [item.strip() for item in list_a]
+list_b = [item.strip() if not item.strip().isdigit() else int(item.strip()) for item in list_b]
+
+# Call the function to concatenate the lists
+result = concatenate_lists(list_a, list_b)
+
+# Print the result
+print(result)
